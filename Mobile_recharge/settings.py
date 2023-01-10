@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     "Recharge",
     "rest_framework",
     "Api",
+    "payments",
     ]
 
 MIDDLEWARE = [

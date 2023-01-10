@@ -3,19 +3,80 @@
 {% block content %}
 <div class="container">
     <div class="row align-items-center m-5">
-        <div class="col-md-12 m-3">
-            <div class="dropdown" style="width: 100%;">
-                <h6 class="dropdown-toggle" type="button" id="" data-bs-toggle="dropdown">
-                    Airtel
-                </h6>
-                <ul class="dropdown-menu" aria-labelledby="">
-                  <li><a class="dropdown-item" href="/View-plans">View Plans</a></li>
-                  <li><a class="dropdown-item" href="/airtel-recharge">Recharge</a></li>
-                </ul>
+  {% block heading %}
+  <h5>Prepaid Recharge Plan Apis</h5>
+    {% endblock heading%}
+        <div class="col-md-12">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item my-5">
+                  <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="background: #f3f3f3;
+                    border-radius: 50px;">
+                      <h6 class="m-1 mx-4">Airtel</h6>Click here for exciting Airtel plans.
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <a href="/View-plans">View Plans</a>
+                            </li>
+                        </ul>
+                        <hr>
+                        <ul>
+                          <li><a href="/airtel-recharge">Recharge</a>
+                          </li>
+                        </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item my-5">
+                  <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo"
+                    style="background: #f3f3f3;
+                    border-radius: 50px;">
+                      <h6 class="m-1 mx-4">Jio</h6>Click here for exciting Jio plans.
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                          <li>
+                              <a href="/JioView-plans">View Plans</a>
+                          </li>
+                      </ul>
+                      <hr>
+                      <ul>
+                        <li><a href="/jio-recharge">Recharge</a>
+                        </li>
+                      </ul>
+                  </div>
+                  </div>
+                </div>
+                <div class="accordion-item my-5">
+                  <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree" style="background: #f3f3f3;
+                    border-radius: 50px;">
+                      <h6 class="m-1 mx-4">VI</h6>Click here for exciting VI plans.
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">
+                      <ul>
+                          <li>
+                              <a href="/ViView-plans">View Plans</a>
+                          </li>
+                      </ul>
+                      <hr>
+                      <ul>
+                        <li><a href="/vi-recharge">Recharge</a>
+                        </li>
+                      </ul>
+                  </div>
+                  </div>
+                </div>
               </div>
         </div>
-        <div class="col-md-12 m-3">Jio</div>
-        <div class="col-md-12 m-3">VI</div>
     </div>
 </div>
 {% endblock content %}

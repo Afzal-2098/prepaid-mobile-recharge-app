@@ -1,0 +1,34 @@
+{% extends 'Recharge/base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 my-5">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/payment/" method="post">
+                        {% csrf_token %}
+                        <input type="text" placeholder="Mobile Number" class="form-control" name="phonenum" id="phonenum" required>
+                        <br>
+                    {% for plan in plandata %}
+                    <p class="card-text">Amount : <strong>{{plan.price}} &#x20B9; ({{plan.company}} Prepaid Plan)</strong></p>
+                    <p class="card-text">Daily Data Limit : <strong>{{plan.data}}/Day</strong></p>
+                        <p class="card-text">Daily Message : <strong>{{plan.sms}} messages/Day</strong></p>
+                        <p class="card-text">Plan is Valid For : <strong>{{plan.validity}} Days</strong></p>
+                        <input type="hidden" class="card-text" name="planid" value="{{plan.id}}" />
+                        <input type="hidden" class="card-text" name="companyname" value="{{plan.company}}" />
+                    {% endfor %}
+                    <input type="submit" class="btn btn-danger" value="Pay Amount">
+                    </form>
+                </div>
+            </div>
+            
+             <div>
+    
+             </div>   
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

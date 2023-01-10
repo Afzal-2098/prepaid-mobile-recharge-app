@@ -1,3 +1,11 @@
 .container-fluid a{
     color: red;
 }
+button.accordion-button:not(.collapsed){
+    background-color: rgb(220, 53, 69) !important;
+    color: white;
+}
+
+.accordion-button:focus{
+    box-shadow: none !important;
+}
